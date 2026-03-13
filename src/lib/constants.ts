@@ -1,6 +1,6 @@
-export const SITE_NAME = "RunPod Labs";
+export const SITE_NAME = "Runpod Labs";
 export const SITE_DESCRIPTION =
-  "Experimental projects from the RunPod community. Unofficial. Open source. Just cool stuff with AI and agents.";
+  "Experimental AI and agent projects by Runpod. Unofficial. Open source.";
 export const SITE_URL = "https://runpod-labs.github.io/site";
 
 export const GITHUB_ORG = "https://github.com/runpod-labs";

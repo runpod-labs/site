@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "motion/react";
 import { GITHUB_ORG } from "@/lib/constants";
 
@@ -13,20 +14,17 @@ export function Header() {
       className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-2xl border-b border-border"
     >
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 h-14 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
-          {/* Logo mark — angled bracket style */}
-          <div className="relative w-7 h-7 flex items-center justify-center">
-            <div className="absolute inset-0 rounded-md bg-purple/20 group-hover:bg-purple/30 transition-colors" />
-            <span className="relative text-purple-light font-mono text-xs font-bold">
-              RP
-            </span>
-          </div>
-          <span className="text-sm tracking-wide">
-            <span className="font-medium text-foreground/90">RunPod</span>
-            <span className="text-muted mx-1.5">/</span>
-            <span className="font-display italic text-purple-light text-base">
-              Labs
-            </span>
+        <Link href="/" className="flex items-center gap-2.5 group">
+          <Image
+            src="/runpod-wordmark-text.webp"
+            alt="Runpod"
+            width={90}
+            height={20}
+            className="opacity-90 group-hover:opacity-100 transition-opacity"
+          />
+          <span className="text-muted/40 text-sm">/</span>
+          <span className="font-display italic text-purple-light text-base">
+            Labs
           </span>
         </Link>
 

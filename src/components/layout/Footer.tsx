@@ -19,8 +19,8 @@ export function Footer() {
               Disclaimer
             </p>
             <p className="text-sm text-muted/80 leading-relaxed">
-              RunPod Labs is an experimental space. Projects here are unofficial,
-              community-driven, and come with zero guarantees. Break things. Learn
+              Runpod Labs is an experimental space. Projects here are unofficial
+              and come with zero guarantees. Break things. Learn
               stuff. Ship it anyway.
             </p>
             <p className="text-xs text-muted/40">
@@ -31,7 +31,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="underline underline-offset-2 hover:text-muted/60 transition-colors"
               >
-                RunPod
+                Runpod
               </a>{" "}
               product.
             </p>
@@ -52,7 +52,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="hover:text-foreground/80 transition-colors"
             >
-              RunPod
+              Runpod
             </a>
           </div>
         </div>

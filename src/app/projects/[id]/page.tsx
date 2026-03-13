@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import Image from "next/image";
 import Markdown from "react-markdown";
 import { getAllProjectIds, getProjectById } from "@/lib/projects";
 import { StatusBadge } from "@/components/ui/StatusBadge";
@@ -86,6 +87,16 @@ export default async function ProjectPage({
                   </span>
                 </div>
 
+                {project.thumbnail && (
+                  <Image
+                    src={project.thumbnail}
+                    alt={project.title}
+                    width={80}
+                    height={80}
+                    className="rounded-xl mb-6"
+                  />
+                )}
+
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] mb-6">
                   {project.title.split(" ")[0]}
                   <br />
@@ -144,6 +155,26 @@ export default async function ProjectPage({
                   </a>
                 )}
               </div>
+
+              {/* Screenshots */}
+              {project.images && project.images.length > 0 && (
+                <div className="mb-16 space-y-4">
+                  {project.images.map((img, i) => (
+                    <div
+                      key={i}
+                      className="rounded-xl border border-border overflow-hidden"
+                    >
+                      <Image
+                        src={img}
+                        alt={`${project.title} screenshot ${i + 1}`}
+                        width={1200}
+                        height={675}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
 
               {/* Description / Content */}
               <div className="project-prose prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:text-2xl prose-h2:mt-16 prose-h2:mb-4 prose-h2:pb-3 prose-h2:border-b prose-h2:border-border prose-p:text-muted prose-p:leading-relaxed prose-a:text-purple-light prose-a:no-underline hover:prose-a:underline prose-code:bg-surface-solid prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono prose-code:text-accent prose-pre:bg-surface-solid prose-pre:border prose-pre:border-border prose-pre:rounded-lg prose-strong:text-foreground prose-li:text-muted prose-ul:space-y-1">

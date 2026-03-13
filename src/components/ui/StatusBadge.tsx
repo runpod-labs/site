@@ -1,6 +1,6 @@
 const statusConfig = {
-  active: {
-    label: "Active",
+  new: {
+    label: "New",
     dotClass: "bg-emerald text-emerald pulse-ring",
     textClass: "text-emerald",
   },

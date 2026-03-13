@@ -10,7 +10,7 @@ export interface Project {
   tagline: string;
   description: string;
   tags: string[];
-  status: "active" | "experimental" | "archived";
+  status: "new" | "experimental" | "archived";
   repoUrl: string;
   liveUrl?: string;
   docsUrl?: string;

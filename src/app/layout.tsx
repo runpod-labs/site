@@ -57,9 +57,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} antialiased bg-background text-foreground min-h-screen flex flex-col grain`}
       >
-        {/* Ambient floating gradient mesh */}
-        <div className="ambient-mesh" />
-
         <Header />
         <main className="flex-1 relative z-10">{children}</main>
         <Footer />

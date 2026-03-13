@@ -18,7 +18,7 @@ export default function Home() {
           url: SITE_URL,
           publisher: {
             "@type": "Organization",
-            name: "RunPod Labs",
+            name: "Runpod Labs",
             url: SITE_URL,
           },
           mainEntity: {
@@ -36,7 +36,7 @@ export default function Home() {
 
       <Hero />
 
-      <div className="mx-auto max-w-[1400px] px-6 md:px-10 pb-20 -mt-4">
+      <div className="px-4 md:px-8 pb-20 -mt-4">
         <ProjectGrid projects={projects} />
       </div>
     </>
