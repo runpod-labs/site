@@ -1,0 +1,19 @@
+{
+  "id": "gpu-benchmark-arena",
+  "title": "GPU Benchmark Arena",
+  "tagline": "Compare GPU performance across models and workloads in real-time.",
+  "description": "GPU Benchmark Arena lets you run standardized AI benchmarks across different GPU types available on RunPod and compare their performance side-by-side.\n\n## What It Does\n\n- Run inference benchmarks on any GPU type (A100, H100, RTX 4090, etc.)\n- Compare tokens/second, time-to-first-token, and throughput\n- Community-contributed benchmark profiles for popular models\n- Historical tracking of performance over time\n\n## Why\n\nChoosing the right GPU for your workload shouldn't require guesswork. This tool gives you real data from real hardware.",
+  "tags": ["benchmarks", "gpu", "performance", "community"],
+  "status": "active",
+  "repoUrl": "https://github.com/runpod-labs/gpu-benchmark-arena",
+  "liveUrl": "https://runpod-labs.github.io/gpu-benchmark-arena",
+  "authors": [
+    {
+      "name": "Tim Pietrusky",
+      "github": "TimPietrusky"
+    }
+  ],
+  "createdAt": "2026-01-20",
+  "updatedAt": "2026-03-05",
+  "featured": true
+}

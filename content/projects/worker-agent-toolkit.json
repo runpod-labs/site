@@ -1,0 +1,19 @@
+{
+  "id": "worker-agent-toolkit",
+  "title": "Worker Agent Toolkit",
+  "tagline": "A framework for building AI agents that orchestrate GPU workers on RunPod.",
+  "description": "The Worker Agent Toolkit provides a high-level abstraction for creating AI agents that can dynamically provision, manage, and orchestrate GPU workers on RunPod's infrastructure.\n\n## Features\n\n- **Dynamic Scaling** — Agents automatically spin up and tear down GPU workers based on demand\n- **Task Routing** — Intelligent routing of inference tasks to the most appropriate worker type\n- **Cost Optimization** — Built-in strategies for balancing performance and cost\n- **MCP Integration** — Expose your agents as Model Context Protocol servers\n\n## Getting Started\n\nInstall the toolkit and configure your RunPod API key to get started. The agent framework handles the rest — from provisioning workers to managing their lifecycle.\n\n```bash\nnpm install @runpod-labs/worker-agent-toolkit\n```",
+  "tags": ["agents", "orchestration", "serverless", "mcp"],
+  "status": "experimental",
+  "repoUrl": "https://github.com/runpod-labs/worker-agent-toolkit",
+  "docsUrl": "https://github.com/runpod-labs/worker-agent-toolkit#readme",
+  "authors": [
+    {
+      "name": "Tim Pietrusky",
+      "github": "TimPietworsky"
+    }
+  ],
+  "createdAt": "2026-02-15",
+  "updatedAt": "2026-03-10",
+  "featured": true
+}

@@ -1,26 +1,205 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #06060b;
+  --foreground: #e8e6f0;
+  --surface: rgba(14, 13, 23, 0.7);
+  --surface-solid: #0e0d17;
+  --surface-hover: rgba(22, 20, 38, 0.8);
+  --border: rgba(255, 255, 255, 0.06);
+  --border-strong: rgba(255, 255, 255, 0.1);
+  --muted: #6b6889;
+  --purple: #7c3aed;
+  --purple-light: #a78bfa;
+  --purple-vivid: #8b5cf6;
+  --purple-dark: #5b21b6;
+  --accent: #c4b5fd;
+  --emerald: #34d399;
+  --amber: #fbbf24;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-solid: var(--surface-solid);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-muted: var(--muted);
+  --color-purple: var(--purple);
+  --color-purple-light: var(--purple-light);
+  --color-purple-vivid: var(--purple-vivid);
+  --color-purple-dark: var(--purple-dark);
+  --color-accent: var(--accent);
+  --color-emerald: var(--emerald);
+  --color-amber: var(--amber);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-display: var(--font-instrument-serif);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--purple);
+  color: white;
+}
+
+/* Film grain overlay */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* Ambient gradient mesh */
+.ambient-mesh {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ambient-mesh::before {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  top: -200px;
+  right: -200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, transparent 70%);
+  animation: drift-1 25s ease-in-out infinite;
+}
+
+.ambient-mesh::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  bottom: -100px;
+  left: -100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.06) 0%, transparent 70%);
+  animation: drift-2 30s ease-in-out infinite;
+}
+
+@keyframes drift-1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-100px, 80px) scale(1.1); }
+  66% { transform: translate(50px, -60px) scale(0.9); }
+}
+
+@keyframes drift-2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(80px, -80px) scale(1.15); }
+}
+
+/* Scanline hover effect */
+.scanline-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanline-hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(124, 58, 237, 0.03) 50%,
+    transparent 100%
+  );
+  background-size: 100% 8px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.scanline-hover:hover::after {
+  opacity: 1;
+}
+
+/* Diagonal accent line on cards */
+.diagonal-accent {
+  position: relative;
+}
+
+.diagonal-accent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background: linear-gradient(to bottom, var(--purple), var(--purple-light), transparent);
+  border-radius: 0 0 2px 2px;
+  transition: height 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.diagonal-accent:hover::before {
+  height: 100%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Section label styling */
+.section-label {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.6875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Glow ring animation for status dots */
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 currentColor; }
+  70% { box-shadow: 0 0 0 4px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+.pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Prose overrides for project detail */
+.project-prose {
+  --tw-prose-body: var(--muted);
+  --tw-prose-headings: var(--foreground);
+  --tw-prose-links: var(--purple-light);
+  --tw-prose-bold: var(--foreground);
+  --tw-prose-code: var(--accent);
+  --tw-prose-pre-bg: var(--surface-solid);
 }

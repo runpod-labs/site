@@ -1,0 +1,77 @@
+{
+  "projects": [
+    {
+      "id": "worker-agent-toolkit",
+      "title": "Worker Agent Toolkit",
+      "tagline": "A framework for building AI agents that orchestrate GPU workers on RunPod.",
+      "description": "The Worker Agent Toolkit provides a high-level abstraction for creating AI agents that can dynamically provision, manage, and orchestrate GPU workers on RunPod's infrastructure.\n\n## Features\n\n- **Dynamic Scaling** — Agents automatically spin up and tear down GPU workers based on demand\n- **Task Routing** — Intelligent routing of inference tasks to the most appropriate worker type\n- **Cost Optimization** — Built-in strategies for balancing performance and cost\n- **MCP Integration** — Expose your agents as Model Context Protocol servers\n\n## Getting Started\n\nInstall the toolkit and configure your RunPod API key to get started. The agent framework handles the rest — from provisioning workers to managing their lifecycle.\n\n```bash\nnpm install @runpod-labs/worker-agent-toolkit\n```",
+      "tags": [
+        "agents",
+        "orchestration",
+        "serverless",
+        "mcp"
+      ],
+      "status": "experimental",
+      "repoUrl": "https://github.com/runpod-labs/worker-agent-toolkit",
+      "docsUrl": "https://github.com/runpod-labs/worker-agent-toolkit#readme",
+      "authors": [
+        {
+          "name": "Tim Pietrusky",
+          "github": "TimPietworsky"
+        }
+      ],
+      "createdAt": "2026-02-15",
+      "updatedAt": "2026-03-10",
+      "featured": true
+    },
+    {
+      "id": "gpu-benchmark-arena",
+      "title": "GPU Benchmark Arena",
+      "tagline": "Compare GPU performance across models and workloads in real-time.",
+      "description": "GPU Benchmark Arena lets you run standardized AI benchmarks across different GPU types available on RunPod and compare their performance side-by-side.\n\n## What It Does\n\n- Run inference benchmarks on any GPU type (A100, H100, RTX 4090, etc.)\n- Compare tokens/second, time-to-first-token, and throughput\n- Community-contributed benchmark profiles for popular models\n- Historical tracking of performance over time\n\n## Why\n\nChoosing the right GPU for your workload shouldn't require guesswork. This tool gives you real data from real hardware.",
+      "tags": [
+        "benchmarks",
+        "gpu",
+        "performance",
+        "community"
+      ],
+      "status": "active",
+      "repoUrl": "https://github.com/runpod-labs/gpu-benchmark-arena",
+      "liveUrl": "https://runpod-labs.github.io/gpu-benchmark-arena",
+      "authors": [
+        {
+          "name": "Tim Pietrusky",
+          "github": "TimPietrusky"
+        }
+      ],
+      "createdAt": "2026-01-20",
+      "updatedAt": "2026-03-05",
+      "featured": true
+    },
+    {
+      "id": "vibe-coder",
+      "title": "Vibe Coder",
+      "tagline": "An AI coding agent that runs on RunPod GPUs with full environment access.",
+      "description": "Vibe Coder is an experimental AI coding agent that gets its own GPU-powered sandbox environment on RunPod. Give it a task, and it writes code, runs it, debugs it, and iterates — all on cloud GPUs.\n\n## How It Works\n\n1. Describe what you want to build\n2. Vibe Coder provisions a RunPod workspace with the right GPU and tools\n3. It writes, executes, and iterates on the code autonomously\n4. You review the results and provide feedback\n\n## Stack\n\n- Claude as the reasoning engine\n- RunPod Serverless for GPU compute\n- Docker containers for isolated environments\n- Real-time streaming of agent activity",
+      "tags": [
+        "agents",
+        "coding",
+        "ai",
+        "sandbox"
+      ],
+      "status": "experimental",
+      "repoUrl": "https://github.com/runpod-labs/vibe-coder",
+      "authors": [
+        {
+          "name": "Tim Pietrusky",
+          "github": "TimPietrusky"
+        }
+      ],
+      "createdAt": "2026-03-01",
+      "updatedAt": "2026-03-12",
+      "featured": false
+    }
+  ],
+  "total": 3,
+  "generatedAt": "2026-03-13T11:40:18.764Z"
+}
