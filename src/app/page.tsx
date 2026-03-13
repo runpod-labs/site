@@ -36,7 +36,7 @@ export default function Home() {
 
       <Hero />
 
-      <div className="mx-auto max-w-[1400px] px-6 md:px-10 pb-20">
+      <div className="mx-auto max-w-[1400px] px-6 md:px-10 pb-20 -mt-4">
         <ProjectGrid projects={projects} />
       </div>
     </>
