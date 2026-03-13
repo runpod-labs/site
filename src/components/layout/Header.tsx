@@ -22,7 +22,6 @@ export function Header() {
             height={20}
             className="opacity-90 group-hover:opacity-100 transition-opacity"
           />
-          <span className="text-muted/40 text-sm">/</span>
           <span className="font-display italic text-purple-light text-base">
             Labs
           </span>
