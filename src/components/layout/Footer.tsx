@@ -4,15 +4,6 @@ export function Footer() {
   return (
     <footer className="relative z-10 border-t border-border mt-40">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 py-16">
-        {/* Top section with large italic text */}
-        <div className="mb-12">
-          <p className="font-display italic text-2xl md:text-3xl text-muted/40 max-w-xl leading-snug">
-            Where experiments live and
-            <br />
-            no one expects anything.
-          </p>
-        </div>
-
         <div className="flex flex-col md:flex-row items-start justify-between gap-8">
           <div className="space-y-3 max-w-md">
             <p className="text-xs font-mono tracking-wider uppercase text-muted/60">

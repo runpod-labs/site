@@ -16,11 +16,12 @@ export function Header() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-10 h-14 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 group">
           <Image
-            src="/runpod-wordmark-text.webp"
+            src="/runpod-logo-white.svg"
             alt="Runpod"
-            width={90}
-            height={20}
-            className="opacity-90 group-hover:opacity-100 transition-opacity"
+            width={118}
+            height={27}
+            className="h-auto w-[118px] opacity-90 group-hover:opacity-100 transition-opacity"
+            priority
           />
           <span className="font-display italic text-purple-light text-base">
             Labs

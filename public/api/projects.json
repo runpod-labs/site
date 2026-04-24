@@ -1,22 +1,23 @@
 {
   "projects": [
     {
-      "id": "openclaw2go",
-      "title": "openclaw2go",
-      "tagline": "Run your OpenClaw agent in a self-contained environment using local open source models.",
-      "description": "openclaw2go lets you run your OpenClaw agent in a self-contained environment powered by local open source models. Pick your models, see exactly how much VRAM you need, and deploy with a single Docker command.\n\n## Features\n\n- **Multi-Model Support** — Run LLMs, image models, and audio models side by side\n- **VRAM Calculator** — See real-time memory usage across your selected models\n- **Hardware Detection** — Supports NVIDIA GPUs (4090, 5090, L40, A100, H100, B200) and Apple Silicon (M3 Pro, M4, M4 Pro, M4 Max, M4 Ultra)\n- **One-Click Deploy** — Get a Docker run command ready to go, or deploy via MLX\n- **Cross-Platform** — Works on Linux, Windows, and macOS\n- **Model Browser** — Search and filter hundreds of models by task type, quantization, context length, and memory\n\n## How It Works\n\n1. Select your operating system and available VRAM\n2. Browse and pick models for each modality (LLM, image, audio)\n3. Review VRAM usage and hardware compatibility\n4. Copy the Docker command and deploy\n\n## Stack\n\n- llama.cpp for LLM inference\n- diffusers for image generation\n- Docker for containerized deployment",
+      "id": "wandler-ai",
+      "title": "wandler.ai",
+      "tagline": "transformers.js inference server with an OpenAI-compatible API for Mac, Linux, and Windows.",
+      "description": "wandler.ai is a transformers.js inference server that lets you run open-weight models through an OpenAI-compatible API. It is built in TypeScript, runs locally on Mac, Linux, and Windows, and drops into existing apps and agents with minimal changes.\n\n## Features\n\n- **OpenAI-Compatible API** — Point existing SDKs, apps, and agents at a local base URL\n- **Cross-Platform Local Inference** — Run on macOS, Linux, and Windows\n- **transformers.js Powered** — Built in TypeScript on top of transformers.js\n- **Model Registry** — Discover and filter supported LLM, embedding, and STT models\n- **Agent-Friendly Setup** — Works with custom OpenAI endpoints and local workflows\n\n## How It Works\n\n1. Install `wandler` globally or run it with `npx`\n2. Start the local server with the model you want to run\n3. Point your app or agent at the local OpenAI-compatible endpoint\n4. Swap models or inspect the registry as needed\n\n## Stack\n\n- TypeScript\n- transformers.js\n- OpenAI-compatible HTTP API\n- Local inference runtime",
       "tags": [
         "local-ai",
-        "docker",
-        "llm",
+        "transformers.js",
+        "openai-api",
         "inference",
-        "tools"
+        "typescript"
       ],
       "status": "new",
-      "repoUrl": "https://github.com/runpod/openclaw2go",
-      "thumbnail": "/projects/openclaw2go/logo.png",
+      "repoUrl": "https://github.com/runpod-labs/wandler",
+      "liveUrl": "https://wandler.ai",
+      "thumbnail": "/projects/wandler-ai/logo.svg",
       "images": [
-        "/projects/openclaw2go/screenshot.png"
+        "/projects/wandler-ai/screenshot.png"
       ],
       "authors": [
         {
@@ -24,11 +25,11 @@
           "github": "TimPietrusky"
         }
       ],
-      "createdAt": "2026-02-01",
-      "updatedAt": "2026-03-13",
+      "createdAt": "2026-04-24",
+      "updatedAt": "2026-04-24",
       "featured": true
     }
   ],
   "total": 1,
-  "generatedAt": "2026-03-13T22:56:21.885Z"
+  "generatedAt": "2026-04-24T15:47:37.724Z"
 }
