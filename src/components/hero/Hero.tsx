@@ -17,6 +17,8 @@ const SpinningLogo = dynamic(
 export function Hero() {
   return (
     <section className="relative flex items-center justify-center pt-20 pb-6 overflow-hidden">
+      <h1 className="sr-only">Runpod Labs</h1>
+
       {/* Radial gradient for depth */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(124,58,237,0.06),transparent_60%)] pointer-events-none" />
 
