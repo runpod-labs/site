@@ -22,14 +22,33 @@ export function generateMetadata({
     const project = getProjectById(id);
     if (!project) return { title: "Not Found" };
 
+    const image =
+      project.images?.[0] ?? project.thumbnail ?? "/runpod-wordmark.webp";
+    const url = `${SITE_URL}/projects/${project.id}`;
+
     return {
       title: project.title,
       description: project.tagline,
+      alternates: {
+        canonical: url,
+      },
       openGraph: {
         title: project.title,
         description: project.tagline,
-        url: `${SITE_URL}/projects/${project.id}`,
+        url,
         type: "article",
+        images: [
+          {
+            url: image,
+            alt: `${project.title} preview`,
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: project.title,
+        description: project.tagline,
+        images: [image],
       },
     };
   });
