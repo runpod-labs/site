@@ -29,17 +29,29 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: SITE_URL,
+  },
   openGraph: {
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
     siteName: SITE_NAME,
     type: "website",
+    images: [
+      {
+        url: "/runpod-wordmark.webp",
+        width: 1790,
+        height: 392,
+        alt: SITE_NAME,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_NAME,
     description: SITE_DESCRIPTION,
+    images: ["/runpod-wordmark.webp"],
   },
   robots: {
     index: true,
