@@ -3,7 +3,7 @@
     {
       "id": "wandler-ai",
       "title": "wandler.ai",
-      "tagline": "transformers.js inference server with an OpenAI-compatible API for Mac, Linux, and Windows.",
+      "tagline": "Run open-weight models locally with wandler.ai, a transformers.js inference server with an OpenAI-compatible API for macOS, Linux, and Windows.",
       "description": "wandler.ai is a transformers.js inference server that lets you run open-weight models through an OpenAI-compatible API. It is built in TypeScript, runs locally on Mac, Linux, and Windows, and drops into existing apps and agents with minimal changes.\n\n## Features\n\n- **OpenAI-Compatible API** — Point existing SDKs, apps, and agents at a local base URL\n- **Cross-Platform Local Inference** — Run on macOS, Linux, and Windows\n- **transformers.js Powered** — Built in TypeScript on top of transformers.js\n- **Model Registry** — Discover and filter supported LLM, embedding, and STT models\n- **Agent-Friendly Setup** — Works with custom OpenAI endpoints and local workflows\n\n## How It Works\n\n1. Install `wandler` globally or run it with `npx`\n2. Start the local server with the model you want to run\n3. Point your app or agent at the local OpenAI-compatible endpoint\n4. Swap models or inspect the registry as needed\n\n## Stack\n\n- TypeScript\n- transformers.js\n- OpenAI-compatible HTTP API\n- Local inference runtime",
       "tags": [
         "local-ai",
@@ -31,5 +31,5 @@
     }
   ],
   "total": 1,
-  "generatedAt": "2026-04-24T15:47:37.724Z"
+  "generatedAt": "2026-07-18T18:46:54.154Z"
 }
